@@ -1,7 +1,7 @@
 # Color-Tracking
  A jupyter notebook that represents me and my team's work to build a color tracking robot.
 
-This project is part of our Advanced Microprocessor course term project. Our idea was to build an autonomous chair with many functionalities, one of which was to follow its user. The project was based on an Arduino Uno board, so we neede da method that did not require a lot of processing power, meanwhile producing acceptable results. We concluded that real time color tracking would be a great solution. This notebook serves as a visulization to a similar code written in Ardiuno C.
+This project is part of our Advanced Microprocessor course term project. Our idea was to build an autonomous chair with many functionalities, one of which was to follow its user. The project was based on an Arduino Uno board, so we needed a method that did not require a lot of processing power, meanwhile producing acceptable results. We concluded that real time color tracking would be a great solution. This notebook serves as a visulization to a similar code written in Ardiuno C.
 
 During this project, we learned of different color models, and how to convert different models to one another. Our first approach was using RGB565, then we progressed till we dedcided to use the HSL model(Hue, Saturation, Lightness).
 
