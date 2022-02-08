@@ -100,7 +100,7 @@ This reduces the big difficult task into two easy small subtasks:
 1. Picking the right hue value to represent the color
 2. Getting the right formula for the ellipsoid to cover the color range.
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; width: 100%">
+<div align="center">
 <img src="./imgs/Eq.jpg" alt="Equation" style="width:400px;">
 </div>
 
@@ -108,7 +108,7 @@ This is the final equation that we found to work best on different scenes of gre
 
 ### A Different Perspective
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; width: 100%">
+<div align="center">
 <img src="./imgs/HSLCone.png" alt="HSL Cone" style="width:300px;">
 <img src="./imgs/cone.png" alt="Triangle" style="width:200px;">
 <img src="./imgs/cone2.png" alt="Triangle with Range" style="width:200px;">
