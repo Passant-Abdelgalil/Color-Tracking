@@ -1,11 +1,13 @@
 # Color-Tracking
- A jupyter notebook that represents me and my team's work to build a color tracking robot.
+
+A jupyter notebook that represents me and my team's work to build a color tracking robot.
 
 This project is part of our Advanced Microprocessor course term project. Our idea was to build an autonomous chair with many functionalities, one of which was to follow its user. The project was based on an Arduino Uno board, so we needed a method that did not require a lot of processing power, meanwhile producing acceptable results. We concluded that real time color tracking would be a great solution. This notebook serves as a visulization to a similar code written in Ardiuno C.
 
 During this project, we learned of different color models, and how to convert different models to one another. Our first approach was using RGB565, then we progressed till we dedcided to use the HSL model(Hue, Saturation, Lightness).
 
 # Following the User
+
 In this notebook we discuss the concepts and methodology qused to make the smart chair follow a certain object based on its color, technically this problem is well known as color tracking.
 
 We can divide our task into mainly 3 tasks
@@ -19,21 +21,28 @@ We can divide our task into mainly 3 tasks
 To run the notebook, you would either need JupyterLab or classis Jupyter notebook, both can be installed using conda or pip.
 
 To install conda follow instructions in the following link:
- https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
+https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
 
-### To install JupyterLab run  
+### To install JupyterLab run
+
 ```conda
 conda install -c conda-forge jupyterlab
 ```
-or 
+
+or
+
 ```bash
 pip install jupyterlab
 ```
-### or install the classic Jupyter notebook run 
-```conda 
+
+### or install the classic Jupyter notebook run
+
+```conda
 conda install -c conda-forge notebook
 ```
-or 
+
+or
+
 ```bash
 pip install notebook
 ```
@@ -64,9 +73,9 @@ This was a challenging task as there were many options for color models such as 
 <img src="./imgs/hsl.png" alt="HSL Color Space" style="width:400px">
 <br>
 
-* **Hue**: A value we can interpret in the color space as the angle that determines the color
-* **Saturation**: A value that determines how pure the hue is. We can interpret it in the color space as the radius.
-* **Lightness**: A value that can be interpreted as how much the amount of white/black mixed with the color.
+- **Hue**: A value we can interpret in the color space as the angle that determines the color
+- **Saturation**: A value that determines how pure the hue is. We can interpret it in the color space as the radius.
+- **Lightness**: A value that can be interpreted as how much the amount of white/black mixed with the color.
 
 Picking a value for Lightness (L) cuts the cylinder in a circle (a.k.a color wheel) where you can choose Hue (the color) and saturation (Color Pureness)
 
@@ -87,6 +96,14 @@ But since the pixels have three varaibles H, S, L that represent the color not o
 Now with the formula for the ellipsoid covering the color range we set, we can check whether a certain pixel in an image is colored with our unique color by just checking if its hsl values satisfy the formula or not!
 
 This reduces the big difficult task into two easy small subtasks:
+
 1. Picking the right hue value to represent the color
 2. Getting the right formula for the ellipsoid to cover the color range.
 
+<div style="display: flex; flex-wrap: wrap;">
+<img src="./imgs/HSLCone.png" alt="HSL Cone" style="width:250px;">
+<img src="./imgs/Cone.png" alt="Triangle" style="width:250px;">
+<img src="./imgs/Cone2.png" alt="Triangle with Range" style="width:250px;">
+</div>
+
+This can be also represented by a triangle (angular section in cone) to eliminate repeated values at lightness = 0 or 1. the resulting region is shown above
