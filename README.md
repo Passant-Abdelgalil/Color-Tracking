@@ -58,7 +58,9 @@ This is how we calculated the centroid of our object, after we set the range for
 
 We are not interested in Y coordinate of the centroid because we are not going to have the chair fly!
 
-<img src="./imgs/centroid.png" alt="Color detection" style="width:400px">
+<div align="center">
+<img  src="./imgs/centroid.png" alt="Color detection" style="width:400px">
+</div>
 
 We found that this approach is good in situations where there are more than one object with the selected color ( which by the way shouldn't happen often since the color should be unique, but just in case there were another object with the same color),
 
@@ -70,7 +72,9 @@ This was a challenging task as there were many options for color models such as 
 
 ### HSL Color Model [ Hue, Saturation, Lightness]
 
-<img src="./imgs/hsl.png" alt="HSL Color Space" style="width:400px">
+<div align="center">
+<img  src="./imgs/hsl.png" alt="HSL Color Space" style="width:400px">
+</div>
 <br>
 
 - **Hue**: A value we can interpret in the color space as the angle that determines the color
@@ -79,7 +83,9 @@ This was a challenging task as there were many options for color models such as 
 
 Picking a value for Lightness (L) cuts the cylinder in a circle (a.k.a color wheel) where you can choose Hue (the color) and saturation (Color Pureness)
 
-<img src="./imgs/hue.jpg" alt="color wheel" style="width:300px;">
+<div align="center">
+<img  src="./imgs/hue.jpg" alt="color wheel" style="width:300px;">
+</div>
 
 # Our Approach
 
@@ -87,7 +93,9 @@ So the task is to track an object by its color. Using HSL color model this can b
 
 This is the rectangular we get with hue = 117
 
-<img src="./imgs/algo.jpeg" alt="Color Range" style="width:300px;">
+<div align="center">
+<img  src="./imgs/algo.jpeg" alt="Color Range" style="width:300px;">
+</div>
 
 As you can see there are regions in the rectangular that are purely black, grey, white, and others that are gray-green! so we shouldn't consider the whole rectangular area, instead we should take the subarea where the degree of the color is accepted, this is the left half of the ellipse in the image
 
@@ -103,6 +111,7 @@ This reduces the big difficult task into two easy small subtasks:
 <div align="center">
 <img src="./imgs/Eq.jpg" alt="Equation" style="width:400px;">
 </div>
+<br/>
 
 This is the final equation that we found to work best on different scenes of green parts
 
@@ -113,7 +122,21 @@ This is the final equation that we found to work best on different scenes of gre
 <img src="./imgs/cone.png" alt="Triangle" style="width:200px;">
 <img src="./imgs/cone2.png" alt="Triangle with Range" style="width:200px;">
 </div>
+<br/>
 
 This can be also represented by a triangle (angular section in cone) to eliminate repetition at lightness = 0 or 1. the resulting region is shown above
 
 # Results
+
+Below are some examples showing how input images with green objects are detected
+
+<br/>
+<div align="center">
+<img src="./imgs/Ex2before.jpg" alt="Ex2before" style="width:350px;">
+<img src="./imgs/Ex2after.jpg" alt="Ex2after" style="width:350px;">
+</div>
+<br/>
+<div align="center">
+<img src="./imgs/Ex1before.jpg" alt="Ex1before" style="width:350px;">
+<img src="./imgs/Ex1after.jpg" alt="Ex1after" style="width:350px;">
+</div>
