@@ -100,10 +100,20 @@ This reduces the big difficult task into two easy small subtasks:
 1. Picking the right hue value to represent the color
 2. Getting the right formula for the ellipsoid to cover the color range.
 
-<div style="display: flex; flex-wrap: wrap;">
-<img src="./imgs/HSLCone.png" alt="HSL Cone" style="width:250px;">
-<img src="./imgs/Cone.png" alt="Triangle" style="width:250px;">
-<img src="./imgs/Cone2.png" alt="Triangle with Range" style="width:250px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center">
+<img src="./imgs/Eq.jpg" alt="Equation" style="width:400px;">
 </div>
 
-This can be also represented by a triangle (angular section in cone) to eliminate repeated values at lightness = 0 or 1. the resulting region is shown above
+This is the final equation that we found to work best on different scenes of green parts
+
+### A Different Perspective
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center">
+<img src="./imgs/HSLCone.png" alt="HSL Cone" style="width:300px;">
+<img src="./imgs/Cone.png" alt="Triangle" style="width:200px;">
+<img src="./imgs/Cone2.png" alt="Triangle with Range" style="width:200px;">
+</div>
+
+This can be also represented by a triangle (angular section in cone) to eliminate repetition at lightness = 0 or 1. the resulting region is shown above
+
+# Results
