@@ -132,11 +132,11 @@ Below are some examples showing how input images with green objects are detected
 
 <br/>
 <div align="center">
-<img src="./imgs/Ex2before.jpg" alt="Ex2before" style="width:350px;">
-<img src="./imgs/Ex2after.jpg" alt="Ex2after" style="width:350px;">
+<img src="./imgs/Ex2before.JPG" alt="Ex2before" style="width:350px;">
+<img src="./imgs/Ex2after.JPG" alt="Ex2after" style="width:350px;">
 </div>
 <br/>
 <div align="center">
-<img src="./imgs/Ex1before.jpg" alt="Ex1before" style="width:350px;">
-<img src="./imgs/Ex1after.jpg" alt="Ex1after" style="width:350px;">
+<img src="./imgs/Ex1before.JPG" alt="Ex1before" style="width:350px;">
+<img src="./imgs/Ex1after.JPG" alt="Ex1after" style="width:350px;">
 </div>
